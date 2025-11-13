@@ -355,13 +355,14 @@ nav a:hover {
   padding: 0;
   font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
   align-self: start;
-  padding-top: 24px;
+  padding-top: 35px;
 }
 
 .contact-info h4 {
