@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Čarovná mýdla – přírodní mýdla</title>
+  <link rel="stylesheet" href="stranka.css?v=3" />
+</head>
+<body>
+  <div class="site">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <img id="logoImg" src="assets/logo1.jpg" alt="Logo Čarovný mlýn" />
+        </div>
+        <div class="brand-text">
+          <h1 contenteditable="true" data-key="title">Čarovná mýdla</h1>
+          <p class="slogan">Řemeslná mýdlárna</p>
+        </div>
+      </div>
+        <div class="nav-wrap">
+          <nav class="nav-right">
+            <ul>
+              <li><a href="#about">O mě</a></li>
+              <li><a href="#contact">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
+      <div class="cart">
+        <button class="cart-btn" id="cartBtn" aria-label="Košík">
+          <!-- simple cart SVG -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-11L6 6z" stroke="#6b4423" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="rgba(0,0,0,0.02)"/>
+            <circle cx="10" cy="20" r="1" fill="#6b4423"/>
+            <circle cx="18" cy="20" r="1" fill="#6b4423"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-slider">
+        <div class="slider-container">
+          <img src="assets/slide1.jpg" alt="Mýdlo 1" class="slider-image active" />
+          <img src="assets/slide2.jpg" alt="Mýdlo 2" class="slider-image" />
+          <img src="assets/slide3.jpg" alt="Mýdlo 3" class="slider-image" />
+        </div>
+        
+        </div>
+
+        <button class="slider-btn prev" id="prevBtn">‹</button>
+        <button class="slider-btn next" id="nextBtn">›</button>
+
+        <div class="slider-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>Doporučujeme</h3>
+      <div class="grid" id="products">
+        <article class="card" data-index="0">
+          <div class="thumb">
+            <img class="pimg" src="https://via.placeholder.com/560x440?text=Produkt+1" alt="Bez pádu andelů" />
+          </div>
+          <h4 contenteditable="true" data-key="p0_name">Bez pádu andelů nepoznali byste krásy padajícího listí</h4>
+          <div class="product-badge">100% přírodní mýdlo</div>
+          <p class="product-description" contenteditable="true" data-key="p0_desc">Složení mýdla obsahuje rostlinné oleje, které jemně čistí a zvlhčují vaši pokožku. Vhodné pro citlivou a suchou pokožku.</p>
+          <div class="product-weight">110 g</div>
+          <div class="price" contenteditable="true" data-key="p0_price">299 Kč</div>
+          <div class="card-actions">
+            <button class="btn btn-primary">Více</button>
+            <button class="btn btn-ghost">Přidat do košíku</button>
+          </div>
+        </article>
+
+        <article class="card" data-index="1">
+          <div class="thumb">
+            <img class="pimg" src="https://via.placeholder.com/560x440?text=Produkt+2" alt="Když nad akvarelem" />
+          </div>
+          <h4 contenteditable="true" data-key="p1_name">Když nad akvarelem zapada slunce</h4>
+          <div class="product-badge">100% přírodní mýdlo</div>
+          <p class="product-description" contenteditable="true" data-key="p1_desc">Luxusní mýdlo s aromatickými oleji. Účinná péče se vůní, která vás bude provázet celý den. Zkuste naši přírodní recepturu.</p>
+          <div class="product-weight">110 g</div>
+          <div class="price" contenteditable="true" data-key="p1_price">189 Kč</div>
+          <div class="card-actions">
+            <button class="btn btn-primary">Více</button>
+            <button class="btn btn-ghost">Přidat do košíku</button>
+          </div>
+        </article>
+
+        <article class="card" data-index="2">
+          <div class="thumb">
+            <img class="pimg" src="https://via.placeholder.com/560x440?text=Produkt+3" alt="Mechanik" />
+          </div>
+          <h4 contenteditable="true" data-key="p2_name">Mechanik</h4>
+          <div class="product-badge">100% přírodní mýdlo</div>
+          <p class="product-description" contenteditable="true" data-key="p2_desc">Speciálně vytvořeno pro pracovníky. Účinně odstraňuje nečistoty, silné oleje a smůly. Jemné i pro každodenní použití.</p>
+          <div class="product-weight">110 g</div>
+          <div class="price" contenteditable="true" data-key="p2_price">169 Kč</div>
+          <div class="card-actions">
+            <button class="btn btn-primary">Více</button>
+            <button class="btn btn-ghost">Přidat do košíku</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- O mě Section -->
+    <section class="section about-section" id="about">
+      <h3>O mě</h3>
+      <div class="about-content">
+        <p contenteditable="true" data-key="about_text">
+          Vítejte! Jmenuju se a specialistuji se na výrobu přírodních, ručně vyráběných mýdel. Každé mýdlo je vytvořeno s láskou a péčí, s využitím pouze nejkvalitnějších přírodních ingrediencí. Věřím, že vaše pokožka si zaslouží to nejlepší, bez chemických přísad a syntetických zápachů.
+        </p>
+        <p contenteditable="true" data-key="about_mission">
+          Mou misioní je vám poskytnout produkty, které nejen čistí a pečují, ale také podporují udržitelnost a ekologii. Každý nákup je investicí do vaší péče o zdraví a do přírody.
+        </p>
+      </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section class="section contact-section" id="contact">
+      <h3>Kontakt</h3>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h4></h4>
+          <p>
+            <strong>Email:</strong> 
+            <a href="mailto:info@carovnamydla.cz" contenteditable="true" data-key="contact_email">info@carovnamydla.cz</a>
+          </p>
+          <p>
+            <strong>Telefon:</strong> 
+            <span contenteditable="true" data-key="contact_phone">+420 777 123 456</span>
+          </p>
+          <p>
+            <strong>Adresa:</strong> 
+            <span contenteditable="true" data-key="contact_address">Přírodní mýdla, 130 00 Praha, ČR</span>
+          </p>
+        </div>
+        <div class="contact-form">
+          <h4>Napište nám</h4>
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" placeholder="Vaše jméno" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Váš email" required />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Vaše zpráva" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Odeslat</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Čarovná mýdla<span class="small">Všechny úpravy se ukládají lokálně.</span>
+    </footer>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Váš košík</h2>
+        <button class="modal-close" id="closeCartModal" aria-label="Zavřít">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="cartItems" class="cart-items">
+          <p class="empty-cart">Váš košík je prázdný</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="cart-summary">
+          <div class="summary-line">
+            <span>Celkem:</span>
+            <span id="cartTotal" class="total-price">0 Kč</span>
+          </div>
+        </div>
+        <button class="btn btn-primary" id="checkoutBtn">Pokračovat</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div id="checkoutModal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content checkout-modal">
+      <div class="modal-header">
+        <h2 id="checkoutTitle">Dokončení objednávky</h2>
+        <button class="modal-close" id="closeCheckoutModal" aria-label="Zavřít">&times;</button>
+      </div>
+      
+      <!-- Checkout Form -->
+      <div id="checkoutForm" class="modal-body">
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="customerName">Jméno a příjmení *</label>
+            <input type="text" id="customerName" name="name" required placeholder="Celé jméno" />
+          </div>
+          
+          <div class="form-group">
+            <label for="customerEmail">Email *</label>
+            <input type="email" id="customerEmail" name="email" required placeholder="@" />
+          </div>
+          
+          <div class="form-group">
+            <label for="customerPhone">Telefon *</label>
+            <input type="tel" id="customerPhone" name="phone" required placeholder="+420 ......" />
+          </div>
+          
+          <div class="form-group">
+            <label for="customerAddress">Adresa *</label>
+            <input type="text" id="customerAddress" name="address" required placeholder="Ulice" />
+          </div>
+          
+          <div class="form-group">
+            <label for="customerNote">Poznámka k objednávce</label>
+            <textarea id="customerNote" name="note" placeholder="Např. zvláštní balení, specifikace..."></textarea>
+          </div>
+
+          <div class="checkout-summary">
+            <h3>Přehled objednávky</h3>
+            <div id="checkoutOrderItems"></div>
+            <div class="summary-line total-line">
+              <span>Celkem:</span>
+              <span id="checkoutTotal">0 Kč</span>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Confirmation Screen -->
+      <div id="confirmationScreen" class="modal-body" style="display: none; text-align: center;">
+        <div class="confirmation-icon">✓</div>
+        <h3>Objednávka potvrzena!</h3>
+        <p>Vaše objednávka byla úspěšně odeslána.</p>
+        <div class="order-number">
+          <label>Číslo objednávky:</label>
+          <div class="order-id-box">
+            <span id="orderNumber"></span>
+            <button type="button" id="copyOrderBtn" class="copy-btn" title="Zkopírovat">📋</button>
+          </div>
+        </div>
+        <div class="confirmation-details" id="confirmationDetails"></div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-ghost" id="cancelCheckoutBtn">Zrušit</button>
+        <button class="btn btn-primary" id="submitOrderBtn">Odeslat objednávku</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="stranka.js?v=3"></script>
+</body>
+</html>
